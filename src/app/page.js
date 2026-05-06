@@ -1,5 +1,4 @@
 import React from 'react';
-
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-[#F8FAFC] font-sans text-[#0F172A] scroll-smooth">
