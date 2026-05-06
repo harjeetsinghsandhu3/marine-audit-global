@@ -1,132 +1,132 @@
 import React from 'react';
+
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#F8FAFC] font-sans text-[#0F172A] scroll-smooth">
-      {/* NAVIGATION - Smooth Scroll Enabled */}
-      <nav className="flex items-center justify-between px-6 lg:px-16 py-5 bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+    <div className="flex flex-col min-h-screen bg-[#FDFDFD] font-sans text-slate-900 scroll-smooth">
+      
+      {/* NAVIGATION - Smooth Scroll */}
+      <nav className="flex items-center justify-between px-8 lg:px-20 py-6 bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-100">
         <div className="flex items-center gap-2">
-          <div className="bg-[#1E40AF] text-white px-2 py-1 rounded font-black text-xl">MAG</div>
-          <div className="font-bold text-lg tracking-tight uppercase text-[#1E40AF]">
-            Marine <span className="text-[#C5A021]">Audit</span> Global
+          <div className="bg-[#1E3A8A] text-white px-3 py-1 rounded-md font-black text-2xl tracking-tighter shadow-lg">MAG</div>
+          <div className="font-extrabold text-xl tracking-tight uppercase text-[#1E3A8A]">
+            Marine <span className="text-[#D4AF37]">Audit</span> Global
           </div>
         </div>
-        <div className="hidden lg:flex gap-8 text-xs font-bold uppercase tracking-widest text-slate-500">
-          <a href="#home" className="hover:text-[#1E40AF] transition-all">Home</a>
-          <a href="#services" className="hover:text-[#1E40AF] transition-all">Services</a>
-          <a href="#about" className="hover:text-[#1E40AF] transition-all">About</a>
-          <a href="#contact" className="hover:text-[#1E40AF] transition-all">Contact</a>
+        <div className="hidden lg:flex gap-10 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">
+          <a href="#home" className="hover:text-[#1E3A8A] transition-all">Home</a>
+          <a href="#services" className="hover:text-[#1E3A8A] transition-all">Services</a>
+          <a href="#contact" className="hover:text-[#1E3A8A] transition-all">Contact</a>
         </div>
-        <a href="#request-audit" className="bg-[#C5A021] hover:bg-[#A6861C] text-white px-5 py-2.5 rounded-full font-bold text-[10px] uppercase tracking-wider transition-all shadow-md">
+        <a href="#audit-form" className="bg-[#D4AF37] hover:bg-[#B8962E] text-white px-7 py-3 rounded-full font-bold text-[10px] uppercase tracking-widest transition-transform hover:scale-105 shadow-md">
           Request Audit
         </a>
       </nav>
 
       <main>
-        {/* HERO SECTION - Bright & Professional */}
-        <section id="home" className="relative min-h-[85vh] flex items-center bg-gradient-to-b from-white to-[#F1F5F9] overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6 lg:px-16 w-full grid lg:grid-cols-2 gap-12 items-center py-20">
-            <div className="z-10">
-              <span className="inline-block px-4 py-1 rounded-full bg-blue-50 text-[#1E40AF] text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
-                Maritime Excellence Worldwide
-              </span>
-              <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight mb-8 tracking-tight text-[#1E40AF]">
-                GLOBAL <br />
-                <span className="text-[#C5A021]">STANDARDS.</span>
-              </h1>
-              <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-lg">
-                Independent marine audits delivered by elite surveyors in MAG branded gear. Professionalism, integrity, and safety across every ocean.
-              </p>
-              <div className="flex gap-4">
-                <a href="#services" className="bg-[#1E40AF] text-white px-8 py-4 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-[#1e3a8a] shadow-lg transition-all">
-                  Our Expertise
-                </a>
+        {/* HERO SECTION - Bright & Airy */}
+        <section id="home" className="relative min-h-[90vh] flex items-center pt-20 pb-32">
+          <div className="max-w-7xl mx-auto px-8 lg:px-20 grid lg:grid-cols-2 gap-16 items-center">
+            <div className="z-10 order-2 lg:order-1">
+              <div className="inline-flex items-center gap-3 mb-6">
+                <div className="h-[1px] w-8 bg-[#D4AF37]"></div>
+                <span className="text-[#D4AF37] uppercase tracking-[0.4em] text-[10px] font-bold">Maritime Authority</span>
               </div>
+              <h1 className="text-6xl lg:text-8xl font-black text-[#1E3A8A] leading-[0.9] mb-8 tracking-tighter">
+                ELITE <br />
+                <span className="text-slate-200">INSPECTION.</span>
+              </h1>
+              <p className="text-lg text-slate-500 mb-10 leading-relaxed max-w-md font-medium">
+                Professional marine audits delivered by surveyors in high-visibility <span className="text-[#1E3A8A] font-bold">MAG Branded Boiler Suits</span>. Total integrity, global reach.
+              </p>
+              <a href="#services" className="inline-block border-2 border-[#1E3A8A] text-[#1E3A8A] px-10 py-4 font-bold text-[11px] uppercase tracking-widest hover:bg-[#1E3A8A] hover:text-white transition-all rounded-sm">
+                Explore Services
+              </a>
             </div>
-            {/* VIBRANT SHIP IMAGE PLACEHOLDER - Representing MAG Ship */}
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#C5A021] to-[#1E40AF] rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-              <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
+
+            {/* THE "MAG" SHIP IMAGE */}
+            <div className="order-1 lg:order-2 relative group">
+              <div className="absolute -inset-4 bg-[#D4AF37]/5 rounded-full blur-3xl group-hover:bg-[#D4AF37]/10 transition-all"></div>
+              <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-white">
                 <img 
                   src="https://images.unsplash.com/photo-1544443427-013083375836?q=80&w=1200" 
-                  alt="MAG Ship" 
-                  className="w-full h-[450px] object-cover"
+                  alt="MAG Global Fleet" 
+                  className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded font-black text-[#1E40AF]">MAG BRANDED</div>
+                <div className="absolute bottom-6 left-6 bg-white shadow-xl px-4 py-2 rounded-lg font-black text-[#1E3A8A] border-l-4 border-[#D4AF37]">
+                  MAG VESSEL IDENTIFIED
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* SERVICES SECTION - Highlighted & Creative Boxes */}
-        <section id="services" className="py-24 px-6 lg:px-16 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-20">
-              <h2 className="text-4xl font-bold text-[#1E40AF] mb-4">Specialized Technical Services</h2>
-              <p className="text-slate-500">Elite audit solutions tailored for global maritime operations.</p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <ServiceBox title="Vessel Inspections" icon="🚢" desc="Pre-purchase and condition surveys conducted by MAG experts in full PPE." />
-              <ServiceBox title="Safety Audits" icon="🛡️" desc="Rigorous ISM/ISPS safety assessments to ensure total fleet compliance." />
-              <ServiceBox title="Compliance & Vetting" icon="⚖️" desc="Advanced vetting support and regulatory certification for global waters." />
-              <ServiceBox title="Technical Due Diligence" icon="🔍" desc="Comprehensive asset evaluation for high-stakes maritime investments." />
+        {/* SERVICES - Highlighted Creative Boxes */}
+        <section id="services" className="py-32 bg-[#F8FAFC]">
+          <div className="max-w-7xl mx-auto px-8 lg:px-20">
+            <h2 className="text-center text-4xl font-black text-[#1E3A8A] mb-20 uppercase tracking-tighter">Core Competencies</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <HighlightBox title="Vessel Inspections" icon="🚢" />
+              <HighlightBox title="Safety Audits" icon="🛡️" />
+              <HighlightBox title="Compliance & Vetting" icon="⚖️" />
+              <HighlightBox title="Technical Due Diligence" icon="🔍" />
             </div>
           </div>
         </section>
 
-        {/* REQUEST AUDIT FORM SECTION */}
-        <section id="request-audit" className="py-24 px-6 lg:px-16 bg-[#F1F5F9]">
-          <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
-            <div className="md:w-1/3 bg-[#1E40AF] p-12 text-white">
-              <h3 className="text-3xl font-bold mb-6">Request an Audit</h3>
-              <p className="text-blue-100 mb-8 leading-relaxed">Fill out the form to schedule an elite MAG inspection. Our team responds within 24 hours.</p>
-              <div className="space-y-4 text-sm">
-                <p className="flex items-center gap-3">📍 Global Availability</p>
-                <p className="flex items-center gap-3">📧 info@marineauditglobal.com</p>
-              </div>
+        {/* AUDIT REQUEST FORM */}
+        <section id="audit-form" className="py-32 bg-white">
+          <div className="max-w-4xl mx-auto px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-black text-[#1E3A8A] tracking-tighter">REQUEST AN AUDIT</h2>
+              <p className="text-slate-400 mt-4 uppercase tracking-[0.2em] text-xs font-bold font-mono italic">Global Response within 24 Hours</p>
             </div>
-            <div className="md:w-2/3 p-12">
-              <form className="grid sm:grid-cols-2 gap-6">
-                <input type="text" placeholder="Full Name" className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:border-[#C5A021] outline-none" required />
-                <input type="email" placeholder="Company Email" className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:border-[#C5A021] outline-none" required />
-                <select className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:border-[#C5A021] outline-none sm:col-span-2">
-                   <option>Select Audit Type</option>
-                   <option>Vessel Inspection</option>
-                   <option>Safety Audit</option>
-                   <option>Compliance Vetting</option>
+            <form className="grid grid-cols-1 md:grid-cols-2 gap-8 p-12 bg-slate-50 rounded-3xl border border-slate-100 shadow-sm">
+              <div className="flex flex-col gap-2">
+                <label className="text-[10px] font-bold text-slate-400 uppercase ml-2">Full Name</label>
+                <input type="text" className="w-full p-4 rounded-xl border border-slate-200 outline-none focus:border-[#D4AF37] bg-white transition-all" />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-[10px] font-bold text-slate-400 uppercase ml-2">Email Address</label>
+                <input type="email" className="w-full p-4 rounded-xl border border-slate-200 outline-none focus:border-[#D4AF37] bg-white transition-all" />
+              </div>
+              <div className="flex flex-col gap-2 md:col-span-2">
+                <label className="text-[10px] font-bold text-slate-400 uppercase ml-2">Service Type</label>
+                <select className="w-full p-4 rounded-xl border border-slate-200 outline-none focus:border-[#D4AF37] bg-white transition-all">
+                  <option>Vessel Inspection</option>
+                  <option>Safety Audit (ISM/ISPS)</option>
+                  <option>Pre-Purchase Survey</option>
                 </select>
-                <textarea placeholder="Service Details" className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:border-[#C5A021] outline-none sm:col-span-2 h-32"></textarea>
-                <button type="submit" className="sm:col-span-2 w-full py-4 bg-[#C5A021] text-white font-bold rounded-xl hover:bg-[#1E40AF] transition-all shadow-lg">
-                  Submit Request
-                </button>
-              </form>
-            </div>
+              </div>
+              <button className="md:col-span-2 w-full bg-[#1E3A8A] text-white font-black py-5 rounded-xl uppercase tracking-[0.3em] text-xs hover:bg-[#D4AF37] transition-all shadow-xl">
+                Submit Request
+              </button>
+            </form>
           </div>
         </section>
       </main>
 
-      {/* FOOTER */}
-      <footer className="bg-white border-t border-slate-100 py-10 px-6 text-center">
-        <p className="text-sm font-bold text-[#1E40AF] uppercase tracking-widest mb-2">Marine Audit Global (MAG)</p>
-        <p className="text-xs text-slate-400">© 2026 MAG. Elite Professionalism Across the Globe.</p>
+      {/* CONTACT/FOOTER */}
+      <footer id="contact" className="py-20 bg-white border-t border-slate-100 px-8">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+          <div className="text-center md:text-left">
+            <p className="text-[#1E3A8A] font-black text-xl mb-1 italic">MAG GLOBAL</p>
+            <p className="text-slate-400 text-[10px] uppercase tracking-widest">Independent Maritime Excellence</p>
+          </div>
+          <div className="flex gap-10">
+            <a href="mailto:info@marineauditglobal.com" className="text-sm font-bold text-slate-600 hover:text-[#D4AF37]">info@marineauditglobal.com</a>
+          </div>
+        </div>
       </footer>
     </div>
   );
 }
 
-// Creative Service Box Component
-function ServiceBox({ title, icon, desc }) {
+function HighlightBox({ title, icon }) {
   return (
-    <div className="group bg-white p-8 rounded-2xl border border-slate-100 shadow-md hover:shadow-2xl hover:border-[#C5A021] transition-all duration-300">
-      <div className="text-4xl mb-6 bg-slate-50 w-16 h-16 flex items-center justify-center rounded-xl group-hover:bg-blue-50 transition-colors">
-        {icon}
-      </div>
-      <h4 className="text-xl font-bold mb-4 text-[#1E40AF] group-hover:text-[#C5A021] transition-colors uppercase tracking-tight">
-        {title}
-      </h4>
-      <p className="text-slate-500 text-sm leading-relaxed">
-        {desc}
-      </p>
+    <div className="bg-white p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-2xl hover:border-[#D4AF37] hover:-translate-y-2 transition-all cursor-pointer group">
+      <div className="text-4xl mb-6 grayscale group-hover:grayscale-0 transition-all">{icon}</div>
+      <h3 className="text-sm font-bold text-[#1E3A8A] uppercase tracking-tighter mb-4">{title}</h3>
+      <p className="text-xs text-slate-400 leading-relaxed font-medium">Professional grade technical auditing and compliance reporting for global maritime assets.</p>
     </div>
   );
-}
 }
