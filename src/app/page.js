@@ -2,159 +2,167 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#FDFDFD] font-sans text-slate-900 scroll-smooth">
+    <div className="flex flex-col min-h-screen bg-[#FFFFFF] font-sans text-slate-900 scroll-smooth">
       
-      {/* NAVIGATION */}
-      <nav className="flex items-center justify-between px-8 lg:px-20 py-6 bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-100">
-        <div className="flex items-center gap-2">
-          <div className="bg-[#1E3A8A] text-white px-3 py-1 rounded-md font-black text-2xl tracking-tighter shadow-lg">MAG</div>
-          <div className="font-extrabold text-xl tracking-tight uppercase text-[#1E3A8A]">
+      {/* NAVIGATION - High Visibility */}
+      <nav className="flex items-center justify-between px-8 lg:px-20 py-8 bg-white sticky top-0 z-50 border-b-2 border-slate-100 shadow-md">
+        <div className="flex items-center gap-3">
+          <div className="bg-[#0D1B2A] text-[#D4AF37] px-3 py-1 rounded font-black text-3xl tracking-tighter">MAG</div>
+          <div className="font-black text-2xl tracking-tight uppercase text-[#0D1B2A]">
             Marine <span className="text-[#D4AF37]">Audit</span> Global
           </div>
         </div>
-        <div className="hidden lg:flex gap-10 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">
-          <a href="#home" className="hover:text-[#1E3A8A] transition-all">Home</a>
-          <a href="#services" className="hover:text-[#1E3A8A] transition-all">Services</a>
-          <a href="#contact" className="hover:text-[#1E3A8A] transition-all">Contact</a>
+        
+        {/* Highlighted & Large Nav Options */}
+        <div className="hidden lg:flex gap-12 items-center">
+          <a href="#home" className="text-xl font-black uppercase tracking-widest text-[#0D1B2A] hover:text-[#D4AF37] border-b-4 border-[#D4AF37] transition-all">Home</a>
+          <a href="#services" className="text-xl font-black uppercase tracking-widest text-[#0D1B2A] hover:text-[#D4AF37] hover:border-b-4 border-[#D4AF37] transition-all">Services</a>
+          <a href="#contact" className="text-xl font-black uppercase tracking-widest text-[#0D1B2A] hover:text-[#D4AF37] hover:border-b-4 border-[#D4AF37] transition-all">Contact</a>
         </div>
-        <a href="#audit-form" className="bg-[#D4AF37] hover:bg-[#B8962E] text-white px-7 py-3 rounded-full font-bold text-[10px] uppercase tracking-widest transition-transform hover:scale-105 shadow-md">
+
+        <a href="#audit-form" className="bg-[#1E3A8A] hover:bg-[#D4AF37] text-white px-8 py-4 rounded-sm font-black text-sm uppercase tracking-widest transition-all shadow-lg">
           Request Audit
         </a>
       </nav>
 
       <main>
-        {/* HERO SECTION */}
-        <section id="home" className="relative min-h-[80vh] flex items-center pt-10 pb-20">
-          <div className="max-w-7xl mx-auto px-8 lg:px-20 grid lg:grid-cols-2 gap-16 items-center">
-            <div className="z-10 order-2 lg:order-1">
-              <div className="inline-flex items-center gap-3 mb-6">
-                <div className="h-[1px] w-8 bg-[#D4AF37]"></div>
-                <span className="text-[#D4AF37] uppercase tracking-[0.4em] text-[10px] font-bold">Global Excellence</span>
+        {/* HERO SECTION - Industrial Strength */}
+        <section id="home" className="relative min-h-[85vh] flex items-center bg-[#F8FAFC] py-16">
+          <div className="max-w-7xl mx-auto px-8 lg:px-20 grid lg:grid-cols-2 gap-12 items-center">
+            <div className="z-10">
+              <div className="bg-[#D4AF37] text-white inline-block px-4 py-1 font-bold text-xs uppercase tracking-[0.3em] mb-6">
+                Uncompromising Standards
               </div>
-              <h1 className="text-6xl lg:text-7xl font-black text-[#1E3A8A] leading-[1.1] mb-8 tracking-tighter">
-                TRUSTED <br />
-                <span className="text-slate-300">MARITIME.</span>
+              <h1 className="text-6xl lg:text-8xl font-black text-[#0D1B2A] leading-none mb-8 tracking-tighter">
+                COMMANDING <br />
+                <span className="text-[#D4AF37]">COMPLIANCE.</span>
               </h1>
-              <p className="text-lg text-slate-500 mb-10 leading-relaxed max-w-md font-medium">
-                Premier independent audits by experts in <span className="text-[#1E3A8A] font-bold">MAG Branded Boiler Suits</span>. Delivering safety and compliance to the global fleet.
+              <p className="text-xl text-slate-700 mb-10 leading-relaxed font-bold border-l-8 border-[#1E3A8A] pl-6">
+                MAG sets the global benchmark for maritime integrity. Our surveyors, identifiable in signature 
+                Marine Audit Global (MAG) boiler suits, deliver rigorous, field-proven technical audits that 
+                fortify fleet safety and shield your operations from risk.
               </p>
-              <a href="#services" className="bg-[#1E3A8A] text-white px-10 py-4 font-bold text-[11px] uppercase tracking-widest hover:bg-[#D4AF37] transition-all rounded-sm shadow-lg">
-                View Services
-              </a>
+              <div className="flex gap-4">
+                <a href="#audit-form" className="bg-[#0D1B2A] text-white px-10 py-5 font-black text-xs uppercase tracking-[0.2em] hover:bg-[#1E3A8A] transition-all">
+                  Secure Your Audit
+                </a>
+              </div>
             </div>
 
-            {/* SHIP PHOTO SECTION */}
-            <div className="order-1 lg:order-2 relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+            {/* INDUSTRIAL TANKER IMAGE */}
+            <div className="relative group">
+              <div className="absolute -inset-2 bg-[#D4AF37] opacity-20 rounded-xl"></div>
+              <div className="relative rounded-lg overflow-hidden shadow-2xl border-2 border-slate-200">
                 <img 
-                  src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?q=80&w=1200&auto=format&fit=crop" 
-                  alt="Marine Audit Global Ship" 
-                  className="w-full h-[450px] object-cover"
+                  src="https://images.unsplash.com/photo-1591340705051-789370007e99?q=80&w=1200&auto=format&fit=crop" 
+                  alt="Marine Tanker Ship" 
+                  className="w-full h-[500px] object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1E3A8A]/40 to-transparent"></div>
-              </div>
-              {/* Floating Badge */}
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 shadow-xl rounded-xl border border-slate-100 hidden md:block">
-                <p className="text-[#D4AF37] font-black text-2xl">24/7</p>
-                <p className="text-[10px] font-bold uppercase text-slate-400">Global Support</p>
+                <div className="absolute top-0 right-0 bg-[#0D1B2A] text-white p-4 font-black text-sm uppercase tracking-widest">
+                  Active Inspection Zone
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* SERVICES SECTION */}
-        <section id="services" className="py-24 bg-[#F8FAFC]">
-          <div className="max-w-7xl mx-auto px-8 lg:px-20">
-            <h2 className="text-center text-3xl font-black text-[#1E3A8A] mb-16 uppercase tracking-tight">Technical Competencies</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <HighlightBox title="Vessel Inspections" icon="🚢" />
-              <HighlightBox title="Safety Audits" icon="🛡️" />
-              <HighlightBox title="Sire 2.0 / Rightship" icon="📋" />
-              <HighlightBox title="Incident Investigation" icon="🔍" />
+        {/* TECHNICAL COMPETENCIES SECTION - Detailed Version */}
+        <section id="services" className="py-24 px-8 lg:px-20 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl font-black text-[#0D1B2A] mb-16 text-center uppercase tracking-tighter border-b-4 border-[#D4AF37] inline-block">Technical Competencies</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <ServiceCard 
+                title="Vessel Inspections" 
+                desc="Pre-purchase, condition, class, and flag state statutory inspections with detailed MAG technical reporting."
+                icon="🚢"
+              />
+              <ServiceCard 
+                title="Internal Audits" 
+                desc="Comprehensive ISM, ISPS, and MLC audits to ensure management systems exceed regulatory requirements."
+                icon="⚖️"
+              />
+              <ServiceCard 
+                title="Onboard Training" 
+                desc="Hands-on safety and operational training tailored to your crew's specific vessel and trade route."
+                icon="⚓"
+              />
+              <ServiceCard 
+                title="Sire 2.0 / Rightship" 
+                desc="Strategic preparation and pre-vetting assessments to ensure high scores and seamless approvals."
+                icon="📋"
+              />
+              <ServiceCard 
+                title="TMSA Core Audits" 
+                desc="Tanker Management and Self Assessment verification to align with oil major expectations."
+                icon="🛡️"
+              />
+              <ServiceCard 
+                title="Incident Investigation" 
+                desc="Root Cause Analysis (RCA) and deep-dive investigations for accidents or operational failures."
+                icon="🔍"
+              />
             </div>
           </div>
         </section>
 
-        {/* EXPANDED AUDIT REQUEST FORM */}
-        <section id="audit-form" className="py-32 bg-white">
-          <div className="max-w-5xl mx-auto px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-black text-[#1E3A8A] tracking-tighter uppercase">Request Audit</h2>
-              <div className="h-1 w-20 bg-[#D4AF37] mx-auto mt-4"></div>
-            </div>
-            
-            <form className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 p-10 lg:p-16 bg-[#FDFDFD] rounded-[40px] border border-slate-100 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)]">
-              {/* Personal Details */}
-              <FormInput label="Full Name" type="text" placeholder="John Doe" />
-              <FormInput label="Company Email" type="email" placeholder="john@company.com" />
-              <FormInput label="Phone / Mobile Number" type="tel" placeholder="+1 234 567 890" />
-              <FormInput label="Type of Vessel" type="text" placeholder="e.g. Oil Tanker, Bulk Carrier" />
-
-              {/* Selection Dropdown */}
-              <div className="flex flex-col gap-2 md:col-span-2">
-                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Type of Inspection / Service</label>
-                <select className="w-full p-4 rounded-xl border border-slate-200 outline-none focus:border-[#D4AF37] bg-white transition-all text-sm font-medium">
-                  <option>Select a Service...</option>
-                  <option>Vessel Inspections (Pre-Purchase/Condition)</option>
-                  <option>Internal Audits (ISM / ISPS / MLC)</option>
-                  <option>Onboard Training</option>
-                  <option>Core Audits as per TMSA</option>
-                  <option>Sire 2.0 / Rightship Preparation</option>
-                  <option>Incident / Accident Investigation</option>
-                </select>
-              </div>
-
-              {/* Message */}
-              <div className="flex flex-col gap-2 md:col-span-2">
-                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Additional Details</label>
-                <textarea className="w-full p-4 rounded-xl border border-slate-200 outline-none focus:border-[#D4AF37] bg-white transition-all h-32 text-sm" placeholder="Please specify vessel location and preferred dates..."></textarea>
-              </div>
-
-              <button className="md:col-span-2 w-full bg-[#1E3A8A] text-white font-black py-5 rounded-xl uppercase tracking-[0.3em] text-xs hover:bg-[#D4AF37] transition-all shadow-xl mt-4">
-                Submit Formal Request
+        {/* AUDIT FORM - Comprehensive */}
+        <section id="audit-form" className="py-24 bg-[#F8FAFC] px-8">
+          <div className="max-w-4xl mx-auto bg-white p-12 rounded-lg shadow-xl border border-slate-100">
+            <h3 className="text-3xl font-black text-[#0D1B2A] mb-8 uppercase tracking-tighter">Submit Audit Request</h3>
+            <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <input type="text" placeholder="Full Name" className="p-4 border-2 border-slate-100 focus:border-[#D4AF37] outline-none font-bold" />
+              <input type="email" placeholder="Official Email" className="p-4 border-2 border-slate-100 focus:border-[#D4AF37] outline-none font-bold" />
+              <input type="tel" placeholder="Mobile Number" className="p-4 border-2 border-slate-100 focus:border-[#D4AF37] outline-none font-bold" />
+              <input type="text" placeholder="Type of Vessel" className="p-4 border-2 border-slate-100 focus:border-[#D4AF37] outline-none font-bold" />
+              
+              <select className="p-4 border-2 border-slate-100 focus:border-[#D4AF37] outline-none font-bold md:col-span-2">
+                <option>Select Type of Inspection/Service</option>
+                <option>Vessel Inspections</option>
+                <option>Internal Audits</option>
+                <option>Onboard Training</option>
+                <option>Core Audits as per TMSA</option>
+                <option>Sire 2.0 / Rightship Preparation</option>
+                <option>Incident / Accident Investigation</option>
+              </select>
+              
+              <textarea placeholder="Specific Vessel Location & Project Details" className="p-4 border-2 border-slate-100 focus:border-[#D4AF37] outline-none font-bold md:col-span-2 h-32"></textarea>
+              
+              <button className="md:col-span-2 bg-[#D4AF37] text-[#0D1B2A] font-black py-5 uppercase tracking-[0.3em] hover:bg-[#0D1B2A] hover:text-white transition-all shadow-lg">
+                Dispatch Request
               </button>
             </form>
           </div>
         </section>
       </main>
 
-      {/* FOOTER */}
-      <footer id="contact" className="py-20 bg-white border-t border-slate-100 px-8">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
-          <div className="text-center md:text-left">
-            <p className="text-[#1E3A8A] font-black text-xl mb-1">MARINE AUDIT GLOBAL</p>
-            <p className="text-slate-400 text-[10px] uppercase tracking-[0.3em] font-bold">Independent Excellence</p>
+      {/* FOOTER - Professional & Direct */}
+      <footer id="contact" className="bg-[#0D1B2A] text-white py-16 px-8">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+          <div>
+            <h4 className="text-2xl font-black tracking-tighter">MARINE AUDIT GLOBAL</h4>
+            <p className="text-[#D4AF37] font-bold text-xs uppercase tracking-widest mt-2">Global Technical Authority</p>
           </div>
-          <div className="flex flex-col md:flex-row gap-8 items-center">
-            <a href="mailto:info@marineauditglobal.com" className="text-sm font-bold text-slate-600 hover:text-[#D4AF37]">info@marineauditglobal.com</a>
-            <div className="h-4 w-[1px] bg-slate-200 hidden md:block"></div>
-            <p className="text-sm font-bold text-slate-600">+91 98765 43210</p>
+          <div className="flex flex-col gap-2 font-bold text-sm">
+            <p>📧 info@marineauditglobal.com</p>
+            <p>📞 +91 98765 43210</p>
+            <p>🌐 www.marineauditglobal.com</p>
           </div>
+        </div>
+        <div className="mt-12 pt-8 border-t border-white/10 text-center text-[10px] text-white/40 uppercase tracking-widest">
+          © 2026 Marine Audit Global (MAG). All Rights Reserved.
         </div>
       </footer>
     </div>
   );
 }
 
-// Reusable Components
-function HighlightBox({ title, icon }) {
+function ServiceCard({ title, desc, icon }) {
   return (
-    <div className="group bg-white p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-2xl hover:border-[#D4AF37] transition-all duration-500 cursor-pointer text-center">
-      <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform">{icon}</div>
-      <h3 className="text-[11px] font-black text-[#1E3A8A] uppercase tracking-widest">{title}</h3>
+    <div className="p-8 border-2 border-slate-50 hover:border-[#D4AF37] transition-all bg-slate-50/50 group">
+      <div className="text-4xl mb-4 grayscale group-hover:grayscale-0 transition-all">{icon}</div>
+      <h3 className="text-lg font-black text-[#0D1B2A] uppercase mb-4 tracking-tighter">{title}</h3>
+      <p className="text-sm text-slate-600 font-bold leading-relaxed">{desc}</p>
     </div>
   );
 }
-
-function FormInput({ label, type, placeholder }) {
-  return (
-    <div className="flex flex-col gap-2">
-      <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">{label}</label>
-      <input 
-        type={type} 
-        placeholder={placeholder}
-        className="w-full p-4 rounded-xl border border-slate-200 outline-none focus:border-[#D4AF37] bg-white transition-all text-sm font-medium" 
-      />
-    </div>
-  );
 }
