@@ -25,7 +25,7 @@ export default function Home() {
       </nav>
 
       <main>
-        {/* HERO SECTION - Featuring Industrial Tanker */}
+        {/* HERO SECTION */}
         <section id="home" className="relative min-h-[70vh] flex items-center pt-16 pb-24 px-6 lg:px-20">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <div className="z-10">
@@ -45,7 +45,6 @@ export default function Home() {
               </a>
             </div>
 
-            {/* TANKER PHOTO SECTION */}
             <div className="relative">
               <div className="relative rounded-sm overflow-hidden shadow-2xl border-4 border-white">
                 <img 
@@ -78,7 +77,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SECURE AN AUDIT FORM */}
+        {/* SECURE AN AUDIT FORM & CONTACT PREFERENCES */}
         <section id="audit-form" className="py-24 bg-white px-6">
           <div className="max-w-4xl mx-auto bg-[#0D1B2A] p-10 lg:p-16 shadow-2xl">
             <h3 className="text-3xl font-bold text-white mb-10 text-center uppercase tracking-tight">Secure An Audit</h3>
@@ -88,7 +87,7 @@ export default function Home() {
               <input type="tel" placeholder="Phone / Mobile Number" className="p-3 bg-white text-sm outline-none w-full" required />
               <input type="text" placeholder="Type of Vessel (e.g. Tanker, Bulk)" className="p-3 bg-white text-sm outline-none w-full" />
               
-              <select className="p-3 bg-white text-sm outline-none w-full md:col-span-2 appearance-none text-slate-500">
+              <select className="p-3 bg-white text-sm outline-none w-full md:col-span-2 appearance-none text-slate-500 font-medium">
                 <option>Type of Inspection/Service</option>
                 <option>Vessel Inspections</option>
                 <option>Internal Audits</option>
@@ -99,8 +98,32 @@ export default function Home() {
               </select>
               
               <textarea placeholder="Vessel Location & Project Details" className="p-3 bg-white text-sm outline-none w-full md:col-span-2 h-32"></textarea>
+
+              {/* CONTACT PREFERENCES SECTION */}
+              <div className="md:col-span-2 mt-6 p-6 border border-slate-700 bg-[#142638]">
+                <p className="text-white font-bold text-sm uppercase tracking-wider mb-4 border-b border-slate-700 pb-2">How should we contact you?</p>
+                
+                <div className="space-y-3">
+                  <label className="flex items-center gap-3 cursor-pointer group">
+                    <input type="checkbox" className="w-4 h-4 accent-[#D4AF37] border-none rounded-none" />
+                    <span className="text-slate-300 text-sm group-hover:text-white transition-colors">Please email me back</span>
+                  </label>
+
+                  <label className="flex items-center gap-3 cursor-pointer group">
+                    <input type="checkbox" className="w-4 h-4 accent-[#D4AF37] border-none rounded-none" />
+                    <span className="text-slate-300 text-sm group-hover:text-white transition-colors">Please call me back</span>
+                  </label>
+
+                  <label className="flex items-start gap-3 mt-6 pt-4 border-t border-slate-700 cursor-pointer group">
+                    <input type="checkbox" required className="w-4 h-4 mt-0.5 accent-[#D4AF37] border-none rounded-none" />
+                    <span className="text-slate-300 text-xs leading-relaxed group-hover:text-white transition-colors">
+                      I can confirm that I have read and accept the <a href="#" className="text-[#D4AF37] underline underline-offset-4 font-bold">Privacy Policy</a>
+                    </span>
+                  </label>
+                </div>
+              </div>
               
-              <button type="submit" className="md:col-span-2 bg-[#D4AF37] text-[#0D1B2A] font-black py-3.5 uppercase tracking-[0.2em] text-xs hover:bg-white transition-all shadow-md">
+              <button type="submit" className="md:col-span-2 mt-4 bg-[#D4AF37] text-[#0D1B2A] font-black py-4 uppercase tracking-[0.2em] text-xs hover:bg-white transition-all shadow-md">
                 Request Deployment
               </button>
             </form>
@@ -108,7 +131,7 @@ export default function Home() {
         </section>
       </main>
 
-      {/* FOOTER - Updated with larger fonts and WhatsApp icon */}
+      {/* FOOTER */}
       <footer id="contact" className="bg-[#0D1B2A] text-white py-14 px-6 lg:px-20 border-t border-slate-800">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
           <div className="text-center md:text-left">
@@ -121,7 +144,6 @@ export default function Home() {
               <a href="mailto:info@marineauditglobal.com">info@marineauditglobal.com</a>
             </div>
             <div className="flex items-center justify-center md:justify-end gap-2 text-base lg:text-lg font-black tracking-widest hover:text-[#D4AF37] transition-colors">
-              {/* WhatsApp Icon placeholder via Emoji - clean and professional */}
               <span className="text-green-500 text-xl">💬</span> 
               <a href="tel:+919876543210">+91 98765 43210</a>
             </div>
