@@ -1,213 +1,407 @@
-"use client"; // Required for Next.js App Router
+"use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import {
+  ShieldCheck,
+  Ship,
+  FileSearch,
+  Anchor,
+  Globe,
+  Phone,
+  Menu,
+  X,
+  ArrowRight,
+} from "lucide-react";
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // --- FORM STATE MANAGEMENT ---
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    vesselType: '',
-    serviceType: 'Type of Inspection/Service',
-    details: '',
-    contactEmail: false,
-    contactPhone: false,
-    privacyAccepted: false
-  });
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
 
-  const [status, setStatus] = useState('idle'); // idle, loading, success, error
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  // Handle Input Changes
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
-  };
-
-  // Handle Submission
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    if (!formData.privacyAccepted) {
-      alert("Please accept the Privacy Policy to continue.");
-      return;
-    }
-
-    setStatus('loading');
-
-    try {
-      // SIMULATION: This is where you would call your API
-      // Example: await fetch('/api/send-email', { method: 'POST', body: JSON.stringify(formData) });
-      await new Promise((resolve) => setTimeout(resolve, 2000)); 
-
-      console.log("Form Data Delivered:", formData);
-      setStatus('success');
-      
-      // Reset form after success
-      setFormData({
-        fullName: '', email: '', phone: '', vesselType: '',
-        serviceType: 'Type of Inspection/Service', details: '',
-        contactEmail: false, contactPhone: false, privacyAccepted: false
-      });
-    } catch (error) {
-      setStatus('error');
-    }
-  };
+  const services = [
+    {
+      icon: <Ship className="w-8 h-8" />,
+      title: "Vessel Inspections",
+      desc: "Comprehensive onboard inspections and technical condition assessments worldwide.",
+    },
+    {
+      icon: <ShieldCheck className="w-8 h-8" />,
+      title: "SIRE 2.0 Preparation",
+      desc: "Advanced tanker inspection readiness programs for global compliance.",
+    },
+    {
+      icon: <FileSearch className="w-8 h-8" />,
+      title: "TMSA Audits",
+      desc: "Gap analysis, risk assessment and safety management optimization.",
+    },
+    {
+      icon: <Anchor className="w-8 h-8" />,
+      title: "Dry Dock Supervision",
+      desc: "Technical monitoring and repair supervision during dock operations.",
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: "Marine Consultancy",
+      desc: "Operational excellence, compliance strategy and maritime consultancy.",
+    },
+    {
+      icon: <Phone className="w-8 h-8" />,
+      title: "24/7 Emergency Response",
+      desc: "Rapid global deployment for urgent inspections and investigations.",
+    },
+  ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-white font-sans text-slate-900 scroll-smooth">
-      
-      {/* NAVIGATION */}
-      <nav className="flex items-center justify-between px-6 lg:px-20 py-5 bg-white sticky top-0 z-50 border-b border-slate-100 shadow-sm">
-        <div className="flex items-center gap-3">
-          <div className="bg-[#0D1B2A] text-[#D4AF37] px-2 py-1 rounded font-black text-xl">MAG</div>
-          <div className="font-bold text-lg tracking-tight uppercase text-[#0D1B2A]">
-            Marine <span className="text-[#D4AF37]">Audit</span> Global
+    <div className="bg-[#081120] text-white overflow-hidden">
+      {/* NAVBAR */}
+      <header
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-[#081120]/90 backdrop-blur-lg border-b border-slate-800"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="bg-[#D4AF37] text-[#081120] font-black px-3 py-1 rounded-lg text-xl">
+              MAG
+            </div>
+            <div>
+              <h1 className="font-black tracking-widest text-sm lg:text-lg uppercase">
+                Marine Audit Global
+              </h1>
+            </div>
+          </div>
+
+          <nav className="hidden lg:flex gap-10 text-sm uppercase tracking-widest font-semibold">
+            <a href="#home" className="hover:text-[#D4AF37] transition">
+              Home
+            </a>
+            <a href="#services" className="hover:text-[#D4AF37] transition">
+              Services
+            </a>
+            <a href="#about" className="hover:text-[#D4AF37] transition">
+              About
+            </a>
+            <a href="#contact" className="hover:text-[#D4AF37] transition">
+              Contact
+            </a>
+          </nav>
+
+          <button className="hidden lg:flex items-center gap-2 bg-[#D4AF37] text-[#081120] px-5 py-3 rounded-lg font-bold uppercase text-xs tracking-widest hover:bg-white transition-all">
+            Request Inspection
+            <ArrowRight className="w-4 h-4" />
+          </button>
+
+          <button
+            className="lg:hidden"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
+
+        {menuOpen && (
+          <div className="lg:hidden bg-[#0A192F] border-t border-slate-800 px-6 py-6 flex flex-col gap-5 uppercase text-sm tracking-widest font-semibold">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        )}
+      </header>
+
+      {/* HERO SECTION */}
+      <section
+        id="home"
+        className="relative min-h-screen flex items-center justify-center"
+      >
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1566024287286-4572472b2dc1?q=80&w=1600&auto=format&fit=crop"
+            alt="Marine Vessel"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#081120]/80"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center pt-32">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <p className="text-[#D4AF37] uppercase tracking-[0.3em] text-xs font-bold mb-5">
+              Global Marine Inspection Specialists
+            </p>
+
+            <h1 className="text-5xl lg:text-7xl font-black leading-[0.95] uppercase tracking-tight mb-8">
+              Technical
+              <span className="text-[#D4AF37]"> Integrity</span>
+              <br />
+              Worldwide.
+            </h1>
+
+            <p className="text-slate-300 text-lg leading-relaxed max-w-xl mb-10">
+              Marine Audit Global delivers elite vessel inspections,
+              compliance audits and technical consultancy services across
+              international maritime operations.
+            </p>
+
+            <div className="flex flex-wrap gap-5">
+              <button className="bg-[#D4AF37] hover:bg-white text-[#081120] px-8 py-4 rounded-lg uppercase tracking-widest text-xs font-black transition-all">
+                Request Audit
+              </button>
+
+              <button className="border border-white/30 hover:border-[#D4AF37] px-8 py-4 rounded-lg uppercase tracking-widest text-xs font-black transition-all">
+                Client Portal
+              </button>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="grid grid-cols-2 gap-5"
+          >
+            <div className="bg-white/10 backdrop-blur-lg border border-white/10 p-8 rounded-2xl">
+              <h3 className="text-5xl font-black text-[#D4AF37]">500+</h3>
+              <p className="text-sm uppercase tracking-widest mt-3 text-slate-300">
+                Global Audits
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-lg border border-white/10 p-8 rounded-2xl mt-12">
+              <h3 className="text-5xl font-black text-[#D4AF37]">32</h3>
+              <p className="text-sm uppercase tracking-widest mt-3 text-slate-300">
+                Countries Covered
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-lg border border-white/10 p-8 rounded-2xl -mt-5">
+              <h3 className="text-5xl font-black text-[#D4AF37]">24/7</h3>
+              <p className="text-sm uppercase tracking-widest mt-3 text-slate-300">
+                Emergency Response
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-lg border border-white/10 p-8 rounded-2xl">
+              <h3 className="text-5xl font-black text-[#D4AF37]">18+</h3>
+              <p className="text-sm uppercase tracking-widest mt-3 text-slate-300">
+                Years Experience
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section id="services" className="py-28 px-6 lg:px-10 bg-[#0A192F]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <p className="text-[#D4AF37] uppercase tracking-[0.3em] text-xs font-bold mb-5">
+              Specialized Marine Services
+            </p>
+
+            <h2 className="text-4xl lg:text-6xl font-black uppercase leading-tight mb-6">
+              Elite Maritime
+              <span className="text-[#D4AF37]"> Solutions</span>
+            </h2>
+
+            <p className="text-slate-400 text-lg leading-relaxed">
+              We provide high-impact marine inspections, audits and consultancy
+              services for ship owners, operators and charterers worldwide.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group bg-[#10243F] border border-slate-800 hover:border-[#D4AF37] rounded-2xl p-8 transition-all hover:-translate-y-2"
+              >
+                <div className="text-[#D4AF37] mb-6">{service.icon}</div>
+
+                <h3 className="text-2xl font-bold mb-4 group-hover:text-[#D4AF37] transition-all">
+                  {service.title}
+                </h3>
+
+                <p className="text-slate-400 leading-relaxed text-sm">
+                  {service.desc}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
-        
-        <div className="hidden lg:flex gap-10 items-center">
-          <a href="#home" className="text-sm font-bold uppercase tracking-widest text-[#0D1B2A] hover:text-[#D4AF37] transition-all">Home</a>
-          <a href="#services" className="text-sm font-bold uppercase tracking-widest text-slate-500 hover:text-[#0D1B2A] transition-all">Services</a>
-          <a href="#contact" className="text-sm font-bold uppercase tracking-widest text-slate-500 hover:text-[#0D1B2A] transition-all">Contact</a>
-        </div>
+      </section>
 
-        <a href="#audit-form" className="bg-[#D4AF37] hover:bg-[#C5A021] text-white px-6 py-2.5 rounded-sm font-bold text-[11px] uppercase tracking-widest transition-all shadow-md">
-          Request Audit
-        </a>
-      </nav>
+      {/* ABOUT */}
+      <section id="about" className="py-28 px-6 lg:px-10 bg-[#081120]">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1400&auto=format&fit=crop"
+              alt="Marine Inspection"
+              className="rounded-3xl shadow-2xl"
+            />
+          </div>
 
-      <main>
-        {/* HERO SECTION */}
-        <section id="home" className="relative min-h-[70vh] flex items-center pt-16 pb-24 px-6 lg:px-20">
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-            <div className="z-10">
-              <h1 className="text-6xl lg:text-7xl font-black text-[#0D1B2A] leading-[0.9] mb-4 tracking-tighter uppercase">
-                Absolute <br />
-                <span className="text-[#D4AF37]">Integrity.</span>
-              </h1>
-              <div className="max-w-lg border-l-4 border-[#0D1B2A] pl-6 py-2 mb-8">
-                <p className="text-base text-slate-700 leading-relaxed font-medium">
-                  Marine Audit Global (MAG) defines excellence. Our elite surveyors deliver 
-                  high-impact technical audits.
+          <div>
+            <p className="text-[#D4AF37] uppercase tracking-[0.3em] text-xs font-bold mb-5">
+              About Marine Audit Global
+            </p>
+
+            <h2 className="text-4xl lg:text-6xl font-black uppercase leading-tight mb-8">
+              Built On
+              <span className="text-[#D4AF37]"> Maritime Excellence</span>
+            </h2>
+
+            <p className="text-slate-400 leading-relaxed text-lg mb-8">
+              Marine Audit Global provides international marine inspection and
+              technical consultancy services focused on operational integrity,
+              safety compliance and risk mitigation.
+            </p>
+
+            <div className="grid grid-cols-2 gap-6 mt-10">
+              <div>
+                <h3 className="text-4xl font-black text-[#D4AF37]">1200+</h3>
+                <p className="text-slate-400 mt-2 uppercase tracking-widest text-xs">
+                  Audits Completed
                 </p>
               </div>
-              <a href="#audit-form" className="inline-block bg-[#0D1B2A] text-white px-8 py-4 font-bold text-[11px] uppercase tracking-widest hover:bg-[#1E3A8A] transition-all shadow-lg">
-                Deploy MAG Expertise
-              </a>
-            </div>
 
-            <div className="relative">
-              <div className="relative rounded-sm overflow-hidden shadow-2xl border-4 border-white">
-                <img 
-                  src="https://images.unsplash.com/photo-1590674258941-6101901639d6?q=80&w=1200&auto=format&fit=crop" 
-                  alt="Industrial Tanker Vessel" 
-                  className="w-full h-[450px] object-cover"
-                />
+              <div>
+                <h3 className="text-4xl font-black text-[#D4AF37]">100%</h3>
+                <p className="text-slate-400 mt-2 uppercase tracking-widest text-xs">
+                  Confidential Reporting
+                </p>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* WORKABLE FORM SECTION */}
-        <section id="audit-form" className="py-24 bg-white px-6">
-          <div className="max-w-4xl mx-auto bg-[#0D1B2A] p-10 lg:p-16 shadow-2xl">
-            <h3 className="text-3xl font-bold text-white mb-10 text-center uppercase tracking-tight">Secure An Audit</h3>
-            
-            {status === 'success' ? (
-              <div className="text-center py-10 animate-pulse">
-                <div className="text-[#D4AF37] text-6xl mb-4">✓</div>
-                <h4 className="text-white text-xl font-bold uppercase tracking-widest">Deployment Request Received</h4>
-                <p className="text-slate-400 mt-2">A technical officer will contact you within 4 hours.</p>
-                <button onClick={() => setStatus('idle')} className="mt-8 text-[#D4AF37] text-xs font-bold uppercase underline">Submit another request</button>
+      {/* CONTACT */}
+      <section id="contact" className="py-28 px-6 lg:px-10 bg-[#0A192F]">
+        <div className="max-w-4xl mx-auto bg-[#10243F] border border-slate-800 rounded-3xl p-10 lg:p-16">
+          <div className="text-center mb-12">
+            <p className="text-[#D4AF37] uppercase tracking-[0.3em] text-xs font-bold mb-5">
+              Request Technical Support
+            </p>
+
+            <h2 className="text-4xl lg:text-5xl font-black uppercase mb-6">
+              Deploy Marine Expertise
+            </h2>
+          </div>
+
+          <form className="grid md:grid-cols-2 gap-6">
+            <input
+              type="text"
+              placeholder="Full Name"
+              className="bg-[#081120] border border-slate-700 rounded-xl px-5 py-4 outline-none focus:border-[#D4AF37]"
+            />
+
+            <input
+              type="email"
+              placeholder="Official Email"
+              className="bg-[#081120] border border-slate-700 rounded-xl px-5 py-4 outline-none focus:border-[#D4AF37]"
+            />
+
+            <input
+              type="text"
+              placeholder="Vessel Name"
+              className="bg-[#081120] border border-slate-700 rounded-xl px-5 py-4 outline-none focus:border-[#D4AF37]"
+            />
+
+            <input
+              type="text"
+              placeholder="Port / Location"
+              className="bg-[#081120] border border-slate-700 rounded-xl px-5 py-4 outline-none focus:border-[#D4AF37]"
+            />
+
+            <textarea
+              placeholder="Inspection scope and operational requirements"
+              className="md:col-span-2 bg-[#081120] border border-slate-700 rounded-xl px-5 py-4 outline-none focus:border-[#D4AF37] min-h-[180px]"
+            ></textarea>
+
+            <button className="md:col-span-2 bg-[#D4AF37] hover:bg-white text-[#081120] font-black uppercase tracking-[0.2em] py-5 rounded-xl transition-all">
+              Submit Request
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="bg-[#050B14] border-t border-slate-800 py-16 px-6 lg:px-10">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-4 gap-12">
+          <div>
+            <div className="flex items-center gap-3 mb-5">
+              <div className="bg-[#D4AF37] text-[#081120] font-black px-3 py-1 rounded-lg text-xl">
+                MAG
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <input 
-                  type="text" name="fullName" value={formData.fullName} onChange={handleChange}
-                  placeholder="Full Name" className="p-3 bg-white text-sm outline-none w-full" required 
-                />
-                <input 
-                  type="email" name="email" value={formData.email} onChange={handleChange}
-                  placeholder="Official Email" className="p-3 bg-white text-sm outline-none w-full" required 
-                />
-                <input 
-                  type="tel" name="phone" value={formData.phone} onChange={handleChange}
-                  placeholder="Phone / Mobile Number" className="p-3 bg-white text-sm outline-none w-full" required 
-                />
-                <input 
-                  type="text" name="vesselType" value={formData.vesselType} onChange={handleChange}
-                  placeholder="Type of Vessel (e.g. Tanker, Bulk)" className="p-3 bg-white text-sm outline-none w-full" 
-                />
-                
-                <select 
-                  name="serviceType" value={formData.serviceType} onChange={handleChange}
-                  className="p-3 bg-white text-sm outline-none w-full md:col-span-2 appearance-none text-slate-500 font-medium"
-                >
-                  <option disabled>Type of Inspection/Service</option>
-                  <option>Vessel Inspections</option>
-                  <option>Internal Audits</option>
-                  <option>Onboard Training</option>
-                  <option>Core Audits (TMSA)</option>
-                  <option>Sire 2.0 / Rightship Preparation</option>
-                  <option>Incident Investigation</option>
-                </select>
-                
-                <textarea 
-                  name="details" value={formData.details} onChange={handleChange}
-                  placeholder="Vessel Location & Project Details" className="p-3 bg-white text-sm outline-none w-full md:col-span-2 h-32"
-                ></textarea>
+              <h3 className="font-black uppercase tracking-widest">
+                Marine Audit Global
+              </h3>
+            </div>
 
-                {/* CONTACT PREFERENCES */}
-                <div className="md:col-span-2 mt-6 p-6 border border-slate-700 bg-[#142638]">
-                  <p className="text-white font-bold text-sm uppercase tracking-wider mb-4 border-b border-slate-700 pb-2">How should we contact you?</p>
-                  
-                  <div className="space-y-3">
-                    <label className="flex items-center gap-3 cursor-pointer group">
-                      <input type="checkbox" name="contactEmail" checked={formData.contactEmail} onChange={handleChange} className="w-4 h-4 accent-[#D4AF37]" />
-                      <span className="text-slate-300 text-sm group-hover:text-white transition-colors">Please email me back</span>
-                    </label>
-
-                    <label className="flex items-center gap-3 cursor-pointer group">
-                      <input type="checkbox" name="contactPhone" checked={formData.contactPhone} onChange={handleChange} className="w-4 h-4 accent-[#D4AF37]" />
-                      <span className="text-slate-300 text-sm group-hover:text-white transition-colors">Please call me back</span>
-                    </label>
-
-                    <label className="flex items-start gap-3 mt-6 pt-4 border-t border-slate-700 cursor-pointer group">
-                      <input type="checkbox" name="privacyAccepted" checked={formData.privacyAccepted} onChange={handleChange} required className="w-4 h-4 mt-0.5 accent-[#D4AF37]" />
-                      <span className="text-slate-300 text-xs leading-relaxed group-hover:text-white transition-colors">
-                        I can confirm that I have read and accept the <a href="#" className="text-[#D4AF37] underline font-bold">Privacy Policy</a>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                
-                <button 
-                  type="submit" 
-                  disabled={status === 'loading'}
-                  className="md:col-span-2 mt-4 bg-[#D4AF37] text-[#0D1B2A] font-black py-4 uppercase tracking-[0.2em] text-xs hover:bg-white transition-all shadow-md disabled:bg-slate-500 disabled:cursor-not-allowed"
-                >
-                  {status === 'loading' ? 'Processing Deployment...' : 'Request Deployment'}
-                </button>
-              </form>
-            )}
+            <p className="text-slate-500 text-sm leading-relaxed">
+              Global marine inspection, compliance and technical consultancy
+              services.
+            </p>
           </div>
-        </section>
-      </main>
 
-      <footer className="bg-[#0D1B2A] text-white py-14 px-6 lg:px-20 border-t border-slate-800">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
-          <div className="text-center md:text-left">
-            <h4 className="text-2xl font-black tracking-tight">MARINE AUDIT GLOBAL</h4>
+          <div>
+            <h4 className="font-bold uppercase tracking-widest mb-5 text-sm text-[#D4AF37]">
+              Services
+            </h4>
+
+            <ul className="space-y-3 text-slate-400 text-sm">
+              <li>Vessel Inspections</li>
+              <li>SIRE 2.0</li>
+              <li>TMSA Audits</li>
+              <li>Marine Consultancy</li>
+            </ul>
           </div>
-          <div className="text-center md:text-right">
-            <a href="mailto:info@marineauditglobal.com" className="font-bold hover:text-[#D4AF37]">info@marineauditglobal.com</a>
+
+          <div>
+            <h4 className="font-bold uppercase tracking-widest mb-5 text-sm text-[#D4AF37]">
+              Contact
+            </h4>
+
+            <ul className="space-y-3 text-slate-400 text-sm">
+              <li>operations@marineauditglobal.com</li>
+              <li>24/7 Technical Support</li>
+              <li>Global Coverage</li>
+            </ul>
           </div>
+
+          <div>
+            <h4 className="font-bold uppercase tracking-widest mb-5 text-sm text-[#D4AF37]">
+              Client Access
+            </h4>
+
+            <button className="bg-[#D4AF37] hover:bg-white text-[#081120] px-6 py-4 rounded-xl uppercase tracking-widest text-xs font-black transition-all">
+              Client Portal Login
+            </button>
+          </div>
+        </div>
+
+        <div className="border-t border-slate-800 mt-16 pt-8 text-center text-slate-600 text-sm">
+          © 2026 Marine Audit Global. All rights reserved.
         </div>
       </footer>
     </div>
