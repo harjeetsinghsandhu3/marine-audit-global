@@ -1,4 +1,5 @@
 "use client";
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
@@ -56,10 +57,41 @@ export default function Home() {
       icon: <Phone className="w-8 h-8" />,
       title: "24/7 Emergency Response",
       desc: "Rapid global deployment for urgent inspections and investigations.",
+=======
+
+import React from "react";
+
+export default function Home() {
+  const services = [
+    {
+      title: "Vessel Inspections",
+      text: "Comprehensive onboard inspections and technical assessments worldwide.",
+    },
+    {
+      title: "SIRE 2.0 Preparation",
+      text: "Advanced tanker inspection readiness and compliance consultancy.",
+    },
+    {
+      title: "TMSA Audits",
+      text: "Gap analysis, safety management evaluation and optimization.",
+    },
+    {
+      title: "Dry Dock Supervision",
+      text: "Technical monitoring and repair supervision during dock operations.",
+    },
+    {
+      title: "Marine Consultancy",
+      text: "Operational excellence and maritime consultancy worldwide.",
+    },
+    {
+      title: "24/7 Emergency Response",
+      text: "Rapid deployment for urgent inspections and investigations.",
+>>>>>>> 839151d (Premium marine website upgrade)
     },
   ];
 
   return (
+<<<<<<< HEAD
     <div className="bg-[#081120] text-white overflow-hidden">
       {/* NAVBAR */}
       <header
@@ -147,6 +179,38 @@ export default function Home() {
               Technical
               <span className="text-[#D4AF37]"> Integrity</span>
               <br />
+=======
+    <div className="bg-[#071120] text-white min-h-screen">
+      {/* NAVBAR */}
+      <nav className="fixed top-0 left-0 w-full bg-[#081120] border-b border-slate-800 z-50">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+          <div className="flex items-center gap-3">
+            <div className="bg-[#D4AF37] text-black font-black px-3 py-1 rounded-md">
+              MAG
+            </div>
+            <h1 className="font-black uppercase tracking-widest text-sm lg:text-lg">
+              Marine Audit Global
+            </h1>
+          </div>
+
+          <button className="bg-[#D4AF37] text-black px-5 py-3 rounded-lg text-xs font-black uppercase tracking-widest hover:bg-yellow-300 transition">
+            Request Inspection
+          </button>
+        </div>
+      </nav>
+
+      {/* HERO */}
+      <section className="pt-40 pb-28 px-6 lg:px-10">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+          <div>
+            <p className="text-[#D4AF37] uppercase tracking-[0.4em] text-xs font-bold mb-5">
+              Global Marine Inspection Specialists
+            </p>
+
+            <h1 className="text-5xl lg:text-8xl font-black uppercase leading-none mb-8">
+              Technical
+              <span className="text-[#D4AF37] block">Integrity</span>
+>>>>>>> 839151d (Premium marine website upgrade)
               Worldwide.
             </h1>
 
@@ -156,6 +220,7 @@ export default function Home() {
               international maritime operations.
             </p>
 
+<<<<<<< HEAD
             <div className="flex flex-wrap gap-5">
               <button className="bg-[#D4AF37] hover:bg-white text-[#081120] px-8 py-4 rounded-lg uppercase tracking-widest text-xs font-black transition-all">
                 Request Audit
@@ -176,24 +241,60 @@ export default function Home() {
             <div className="bg-white/10 backdrop-blur-lg border border-white/10 p-8 rounded-2xl">
               <h3 className="text-5xl font-black text-[#D4AF37]">500+</h3>
               <p className="text-sm uppercase tracking-widest mt-3 text-slate-300">
+=======
+            <div className="flex gap-5 flex-wrap">
+              <button className="bg-[#D4AF37] text-black px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs hover:bg-yellow-300 transition">
+                Request Audit
+              </button>
+
+              <button className="border border-slate-700 px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs hover:border-[#D4AF37] hover:text-[#D4AF37] transition">
+                Client Portal
+              </button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-6">
+            <div className="bg-[#10243F] rounded-3xl p-8 border border-slate-800">
+              <h3 className="text-5xl font-black text-[#D4AF37] mb-3">
+                500+
+              </h3>
+              <p className="uppercase text-xs tracking-widest text-slate-400 font-bold">
+>>>>>>> 839151d (Premium marine website upgrade)
                 Global Audits
               </p>
             </div>
 
+<<<<<<< HEAD
             <div className="bg-white/10 backdrop-blur-lg border border-white/10 p-8 rounded-2xl mt-12">
               <h3 className="text-5xl font-black text-[#D4AF37]">32</h3>
               <p className="text-sm uppercase tracking-widest mt-3 text-slate-300">
+=======
+            <div className="bg-[#10243F] rounded-3xl p-8 border border-slate-800">
+              <h3 className="text-5xl font-black text-[#D4AF37] mb-3">
+                32
+              </h3>
+              <p className="uppercase text-xs tracking-widest text-slate-400 font-bold">
+>>>>>>> 839151d (Premium marine website upgrade)
                 Countries Covered
               </p>
             </div>
 
+<<<<<<< HEAD
             <div className="bg-white/10 backdrop-blur-lg border border-white/10 p-8 rounded-2xl -mt-5">
               <h3 className="text-5xl font-black text-[#D4AF37]">24/7</h3>
               <p className="text-sm uppercase tracking-widest mt-3 text-slate-300">
+=======
+            <div className="bg-[#10243F] rounded-3xl p-8 border border-slate-800">
+              <h3 className="text-5xl font-black text-[#D4AF37] mb-3">
+                24/7
+              </h3>
+              <p className="uppercase text-xs tracking-widest text-slate-400 font-bold">
+>>>>>>> 839151d (Premium marine website upgrade)
                 Emergency Response
               </p>
             </div>
 
+<<<<<<< HEAD
             <div className="bg-white/10 backdrop-blur-lg border border-white/10 p-8 rounded-2xl">
               <h3 className="text-5xl font-black text-[#D4AF37]">18+</h3>
               <p className="text-sm uppercase tracking-widest mt-3 text-slate-300">
@@ -201,10 +302,22 @@ export default function Home() {
               </p>
             </div>
           </motion.div>
+=======
+            <div className="bg-[#10243F] rounded-3xl p-8 border border-slate-800">
+              <h3 className="text-5xl font-black text-[#D4AF37] mb-3">
+                18+
+              </h3>
+              <p className="uppercase text-xs tracking-widest text-slate-400 font-bold">
+                Years Experience
+              </p>
+            </div>
+          </div>
+>>>>>>> 839151d (Premium marine website upgrade)
         </div>
       </section>
 
       {/* SERVICES */}
+<<<<<<< HEAD
       <section id="services" className="py-28 px-6 lg:px-10 bg-[#0A192F]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-20">
@@ -245,16 +358,54 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+=======
+      <section className="py-28 px-6 lg:px-10 bg-[#0A192F]">
+        <div className="max-w-7xl mx-auto text-center mb-20">
+          <p className="text-[#D4AF37] uppercase tracking-[0.3em] text-xs font-bold mb-5">
+            Specialized Marine Services
+          </p>
+
+          <h2 className="text-4xl lg:text-7xl font-black uppercase leading-tight mb-8">
+            Elite Maritime
+            <span className="text-[#D4AF37]"> Solutions</span>
+          </h2>
+        </div>
+
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-[#10243F] border border-slate-800 rounded-3xl p-8 hover:border-[#D4AF37] transition"
+            >
+              <h3 className="text-2xl font-black mb-4">
+                {service.title}
+              </h3>
+
+              <p className="text-slate-400 leading-relaxed">
+                {service.text}
+              </p>
+            </div>
+          ))}
+>>>>>>> 839151d (Premium marine website upgrade)
         </div>
       </section>
 
       {/* ABOUT */}
+<<<<<<< HEAD
       <section id="about" className="py-28 px-6 lg:px-10 bg-[#081120]">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <img
               src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1400&auto=format&fit=crop"
               alt="Marine Inspection"
+=======
+      <section className="py-28 px-6 lg:px-10 bg-[#081120]">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1541417904950-b855846fe074?q=80&w=1200&auto=format&fit=crop"
+              alt="Marine"
+>>>>>>> 839151d (Premium marine website upgrade)
               className="rounded-3xl shadow-2xl"
             />
           </div>
@@ -264,6 +415,7 @@ export default function Home() {
               About Marine Audit Global
             </p>
 
+<<<<<<< HEAD
             <h2 className="text-4xl lg:text-6xl font-black uppercase leading-tight mb-8">
               Built On
               <span className="text-[#D4AF37]"> Maritime Excellence</span>
@@ -279,13 +431,39 @@ export default function Home() {
               <div>
                 <h3 className="text-4xl font-black text-[#D4AF37]">1200+</h3>
                 <p className="text-slate-400 mt-2 uppercase tracking-widest text-xs">
+=======
+            <h2 className="text-4xl lg:text-7xl font-black uppercase leading-tight mb-8">
+              Built On
+              <span className="text-[#D4AF37] block">Maritime Excellence</span>
+            </h2>
+
+            <p className="text-slate-400 text-lg leading-relaxed mb-10">
+              Marine Audit Global provides international marine inspection,
+              operational auditing and technical consultancy services focused on
+              operational integrity, safety compliance and risk mitigation.
+            </p>
+
+            <div className="grid grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-5xl font-black text-[#D4AF37] mb-3">
+                  1200+
+                </h3>
+                <p className="uppercase text-xs tracking-widest text-slate-400 font-bold">
+>>>>>>> 839151d (Premium marine website upgrade)
                   Audits Completed
                 </p>
               </div>
 
               <div>
+<<<<<<< HEAD
                 <h3 className="text-4xl font-black text-[#D4AF37]">100%</h3>
                 <p className="text-slate-400 mt-2 uppercase tracking-widest text-xs">
+=======
+                <h3 className="text-5xl font-black text-[#D4AF37] mb-3">
+                  100%
+                </h3>
+                <p className="uppercase text-xs tracking-widest text-slate-400 font-bold">
+>>>>>>> 839151d (Premium marine website upgrade)
                   Confidential Reporting
                 </p>
               </div>
@@ -295,14 +473,23 @@ export default function Home() {
       </section>
 
       {/* CONTACT */}
+<<<<<<< HEAD
       <section id="contact" className="py-28 px-6 lg:px-10 bg-[#0A192F]">
         <div className="max-w-4xl mx-auto bg-[#10243F] border border-slate-800 rounded-3xl p-10 lg:p-16">
+=======
+      <section className="py-28 px-6 lg:px-10 bg-[#0A192F]">
+        <div className="max-w-4xl mx-auto bg-[#10243F] border border-slate-800 rounded-3xl p-10 lg:p-16 shadow-2xl">
+>>>>>>> 839151d (Premium marine website upgrade)
           <div className="text-center mb-12">
             <p className="text-[#D4AF37] uppercase tracking-[0.3em] text-xs font-bold mb-5">
               Request Technical Support
             </p>
 
+<<<<<<< HEAD
             <h2 className="text-4xl lg:text-5xl font-black uppercase mb-6">
+=======
+            <h2 className="text-4xl lg:text-6xl font-black uppercase leading-tight">
+>>>>>>> 839151d (Premium marine website upgrade)
               Deploy Marine Expertise
             </h2>
           </div>
@@ -311,24 +498,37 @@ export default function Home() {
             <input
               type="text"
               placeholder="Full Name"
+<<<<<<< HEAD
               className="bg-[#081120] border border-slate-700 rounded-xl px-5 py-4 outline-none focus:border-[#D4AF37]"
+=======
+              className="bg-[#081120] border border-slate-700 rounded-xl px-5 py-4 outline-none"
+>>>>>>> 839151d (Premium marine website upgrade)
             />
 
             <input
               type="email"
               placeholder="Official Email"
+<<<<<<< HEAD
               className="bg-[#081120] border border-slate-700 rounded-xl px-5 py-4 outline-none focus:border-[#D4AF37]"
+=======
+              className="bg-[#081120] border border-slate-700 rounded-xl px-5 py-4 outline-none"
+>>>>>>> 839151d (Premium marine website upgrade)
             />
 
             <input
               type="text"
               placeholder="Vessel Name"
+<<<<<<< HEAD
               className="bg-[#081120] border border-slate-700 rounded-xl px-5 py-4 outline-none focus:border-[#D4AF37]"
+=======
+              className="bg-[#081120] border border-slate-700 rounded-xl px-5 py-4 outline-none"
+>>>>>>> 839151d (Premium marine website upgrade)
             />
 
             <input
               type="text"
               placeholder="Port / Location"
+<<<<<<< HEAD
               className="bg-[#081120] border border-slate-700 rounded-xl px-5 py-4 outline-none focus:border-[#D4AF37]"
             />
 
@@ -338,6 +538,18 @@ export default function Home() {
             ></textarea>
 
             <button className="md:col-span-2 bg-[#D4AF37] hover:bg-white text-[#081120] font-black uppercase tracking-[0.2em] py-5 rounded-xl transition-all">
+=======
+              className="bg-[#081120] border border-slate-700 rounded-xl px-5 py-4 outline-none"
+            />
+
+            <textarea
+              rows="6"
+              placeholder="Inspection scope and operational requirements"
+              className="md:col-span-2 bg-[#081120] border border-slate-700 rounded-xl px-5 py-4 outline-none"
+            ></textarea>
+
+            <button className="md:col-span-2 bg-[#D4AF37] text-black py-5 rounded-xl font-black uppercase tracking-widest text-sm hover:bg-yellow-300 transition">
+>>>>>>> 839151d (Premium marine website upgrade)
               Submit Request
             </button>
           </form>
@@ -345,6 +557,7 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
+<<<<<<< HEAD
       <footer className="bg-[#050B14] border-t border-slate-800 py-16 px-6 lg:px-10">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-4 gap-12">
           <div>
@@ -353,18 +566,37 @@ export default function Home() {
                 MAG
               </div>
               <h3 className="font-black uppercase tracking-widest">
+=======
+      <footer className="bg-black border-t border-slate-800 py-16 px-6 lg:px-10">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
+          <div>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="bg-[#D4AF37] text-black font-black px-3 py-1 rounded-md">
+                MAG
+              </div>
+
+              <h3 className="uppercase font-black tracking-widest text-sm">
+>>>>>>> 839151d (Premium marine website upgrade)
                 Marine Audit Global
               </h3>
             </div>
 
             <p className="text-slate-500 text-sm leading-relaxed">
+<<<<<<< HEAD
               Global marine inspection, compliance and technical consultancy
               services.
+=======
+              Global marine inspection, compliance and technical consultancy services.
+>>>>>>> 839151d (Premium marine website upgrade)
             </p>
           </div>
 
           <div>
+<<<<<<< HEAD
             <h4 className="font-bold uppercase tracking-widest mb-5 text-sm text-[#D4AF37]">
+=======
+            <h4 className="text-[#D4AF37] uppercase tracking-widest text-xs font-black mb-5">
+>>>>>>> 839151d (Premium marine website upgrade)
               Services
             </h4>
 
@@ -377,7 +609,11 @@ export default function Home() {
           </div>
 
           <div>
+<<<<<<< HEAD
             <h4 className="font-bold uppercase tracking-widest mb-5 text-sm text-[#D4AF37]">
+=======
+            <h4 className="text-[#D4AF37] uppercase tracking-widest text-xs font-black mb-5">
+>>>>>>> 839151d (Premium marine website upgrade)
               Contact
             </h4>
 
@@ -389,17 +625,29 @@ export default function Home() {
           </div>
 
           <div>
+<<<<<<< HEAD
             <h4 className="font-bold uppercase tracking-widest mb-5 text-sm text-[#D4AF37]">
               Client Access
             </h4>
 
             <button className="bg-[#D4AF37] hover:bg-white text-[#081120] px-6 py-4 rounded-xl uppercase tracking-widest text-xs font-black transition-all">
+=======
+            <h4 className="text-[#D4AF37] uppercase tracking-widest text-xs font-black mb-5">
+              Client Access
+            </h4>
+
+            <button className="bg-[#D4AF37] text-black px-6 py-4 rounded-xl font-black uppercase tracking-widest text-xs hover:bg-yellow-300 transition">
+>>>>>>> 839151d (Premium marine website upgrade)
               Client Portal Login
             </button>
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="border-t border-slate-800 mt-16 pt-8 text-center text-slate-600 text-sm">
+=======
+        <div className="border-t border-slate-900 mt-16 pt-8 text-center text-slate-600 text-sm">
+>>>>>>> 839151d (Premium marine website upgrade)
           © 2026 Marine Audit Global. All rights reserved.
         </div>
       </footer>
