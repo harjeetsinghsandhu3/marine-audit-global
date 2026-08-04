@@ -10,6 +10,9 @@ export const metadata = {
 
   description:
     "Marine Audit Global provides independent vessel inspections, SIRE 2.0 preparation, TMSA audits, ISM, ISPS & MLC internal audits, technical consultancy, marine assurance and maritime compliance services worldwide.",
+verification: {
+  google: "59w_H1W3Ei-MoneXobWk-kNsu5tLanHn-B_a-i9-fpQ",
+},
 
   keywords: [
     "Marine Audit",
