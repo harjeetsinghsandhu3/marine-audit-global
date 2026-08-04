@@ -3,38 +3,89 @@ import "./globals.css";
 export const metadata = {
   metadataBase: new URL("https://marineauditglobal.com"),
 
-  title: {
-    default: "Marine Audit Global | Marine Assurance, Vessel Inspections & Consultancy",
-    template: "%s | Marine Audit Global",
-  },
+ title: {
+  default:
+    "Marine Audit Global | Marine Audits, Ship Inspections, Marine Assurance, Ship Internal Audits, Vessel Surveys & Marine Consultancy Worldwide",
+  template: "%s | Marine Audit Global",
+},
 
   description:
-    "Marine Audit Global provides independent vessel inspections, SIRE 2.0 preparation, TMSA audits, ISM, ISPS & MLC internal audits, technical consultancy, marine assurance and maritime compliance services worldwide.",
+  "Marine Audit Global provides independent marine audits, ship inspections, vessel surveys, SIRE 2.0 preparation, TMSA audits, ISM, ISPS & MLC internal audits, marine assurance, technical consultancy and maritime compliance services worldwide.",
 verification: {
   google: "59w_H1W3Ei-MoneXobWk-kNsu5tLanHn-B_a-i9-fpQ",
 },
 
-  keywords: [
-    "Marine Audit",
-    "Marine Assurance",
-    "Vessel Inspection",
-    "SIRE 2.0",
-    "TMSA Audit",
-    "Marine Consultancy",
-    "ISM Audit",
-    "ISPS Audit",
-    "MLC Audit",
-    "PSC Preparation",
-    "CDI Inspection",
-    "RightShip",
-    "Marine Survey",
-    "Shipping Consultancy",
-    "Chief Engineer",
-    "Maritime Compliance",
-    "Ship Inspection",
-    "Marine Safety",
-    "Marine Audit Global",
-  ],
+ keywords: [
+
+  // Marine Audit
+  "Marine Audit",
+  "Ship Audit",
+  "Vessel Audit",
+  "Marine Internal Audit",
+  "Ship Internal Audit",
+  "Vessel Internal Audit",
+  "ISM Internal Audit",
+  "ISPS Internal Audit",
+  "MLC Internal Audit",
+
+  // Marine Inspection
+  "Marine Inspection",
+  "Ship Inspection",
+  "Vessel Inspection",
+  "Marine Survey",
+  "Ship Survey",
+  "Vessel Survey",
+  "Condition Survey",
+  "Technical Inspection",
+  "Pre Purchase Inspection",
+
+  // Vetting
+  "SIRE 2.0",
+  "SIRE 2.0 Preparation",
+  "OCIMF Vetting",
+  "TMSA Audit",
+  "RightShip",
+  "RightShip Preparation",
+  "CDI Inspection",
+  "PSC Preparation",
+  "Flag State Inspection",
+
+  // Consultancy
+  "Marine Consultancy",
+  "Shipping Consultancy",
+  "Maritime Consultancy",
+  "Marine Assurance",
+  "Marine Assurance Consultant",
+  "Marine Technical Consultant",
+  "Marine Risk Assessment",
+  "Marine Investigation",
+  "Accident Investigation",
+  "Cargo Audit",
+  "Navigation Audit",
+  "Engine Room Audit",
+  "Mooring Audit",
+  "Bunker Audit",
+  "Environmental Compliance",
+
+  // Business
+  "Marine Audit Company",
+  "Marine Inspection Company",
+  "Independent Marine Surveyor",
+  "Marine Compliance Consultant",
+  "Maritime Compliance Consultant",
+  "Marine Experts",
+
+  // Geographic
+  "Marine Audit India",
+  "Ship Inspection India",
+  "Marine Survey India",
+  "Marine Consultancy Mumbai",
+  "Global Marine Audit",
+  "Worldwide Marine Inspection",
+
+  // Brand
+  "Marine Audit Global"
+],
 
   authors: [
     {
