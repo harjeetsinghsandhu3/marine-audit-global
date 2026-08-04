@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata = {
   metadataBase: new URL("https://marineauditglobal.com"),
@@ -234,16 +235,34 @@ export default function RootLayout({ children }) {
 };
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-  className="bg-[#061120] text-white antialiased"
->
+     <body className="bg-[#061120] text-white antialiased">
+
+  {/* Google Analytics */}
+  <Script
+    src="https://www.googletagmanager.com/gtag/js?id=G-H33V2770GR"
+    strategy="afterInteractive"
+  />
+
+  <Script id="google-analytics" strategy="afterInteractive">
+    {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-H33V2770GR');
+    `}
+  </Script>
+
+  {/* Structured Data */}
   <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify(jsonLd),
-  }}
-/>
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(jsonLd),
+    }}
+  />
+
   {children}
+
 </body>
     </html>
   );
