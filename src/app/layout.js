@@ -122,41 +122,41 @@ verification: {
   },
 
   openGraph: {
-    title:
-      "Marine Audit Global | Marine Assurance & Vessel Inspection Services",
+  title:
+    "Marine Audit Global | Marine Assurance, Ship & Vessel Inspection Services",
 
-    description:
-      "Professional worldwide marine assurance, vessel inspections, SIRE 2.0 preparation, technical consultancy and maritime compliance services.",
+  description:
+    "Independent marine audits, ship inspections, vessel surveys, SIRE 2.0 preparation, TMSA audits, marine consultancy and maritime compliance services worldwide.",
 
-    url: "https://marineauditglobal.com",
+  url: "https://marineauditglobal.com",
 
-    siteName: "Marine Audit Global",
+  siteName: "Marine Audit Global",
 
-    locale: "en_US",
+  locale: "en_US",
 
-    type: "website",
+  type: "website",
 
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Marine Audit Global",
-      },
-    ],
-  },
+  images: [
+    {
+      url: "/og-image.png",
+      width: 1200,
+      height: 630,
+      alt: "Marine Audit Global - Marine Assurance & Vessel Inspection Services",
+    },
+  ],
+},
 
   twitter: {
-    card: "summary_large_image",
+  card: "summary_large_image",
 
-    title:
-      "Marine Audit Global | Marine Assurance & Vessel Inspection",
+  title:
+    "Marine Audit Global | Marine Assurance, Ship & Vessel Inspection",
 
-    description:
-      "Professional worldwide marine assurance, SIRE 2.0 preparation and marine consultancy.",
+  description:
+    "Independent marine audits, ship inspections, SIRE 2.0 preparation, technical consultancy and maritime compliance services worldwide.",
 
-    images: ["/og-image.png"],
-  },
+  images: ["/og-image.png"],
+},
 
   icons: {
   icon: [
