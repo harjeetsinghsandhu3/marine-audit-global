@@ -254,12 +254,14 @@ export default function RootLayout({ children }) {
   </Script>
 
   {/* Structured Data */}
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify(jsonLd),
-    }}
-  />
+ <Script
+  id="structured-data"
+  type="application/ld+json"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(jsonLd),
+  }}
+/>
 
   {children}
 
