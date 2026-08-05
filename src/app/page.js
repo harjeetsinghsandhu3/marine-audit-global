@@ -816,7 +816,7 @@ operational lifecycle.
 
     <li>Technical Inspections</li>
 
-    <li>Pre-Purchase surveys</li>
+    <li>Pre-Purchase Surveys</li>
 
     <li>Marine Assurance Services</li>
 
@@ -913,7 +913,7 @@ operational lifecycle.
 </h2>
 
             <p className="text-slate-300 mt-8 text-lg leading-8">
-              Request an independent marine inspection, audit or technical assessment tailored to your vessel's operational requirements. Our experienced marine professionals provide practical, objective and confidential support worldwide.
+              Request an independent marine audit, vessel inspection, technical survey or marine consultancy service tailored to your operational requirements. Marine Audit Global provides practical, objective and confidential support to ship owners, ship managers and operators worldwide.
             </p>
 
             <div className="mt-12 space-y-8">
@@ -924,7 +924,7 @@ operational lifecycle.
                 </h3>
 
                 <p className="text-slate-300 mt-2">
-                  Rapid response support across international ports and shipping operations.
+                  Worldwide attendance for vessel inspections, marine audits and technical consultancy through our international network.
                 </p>
               </div>
 
@@ -934,7 +934,7 @@ operational lifecycle.
                 </h3>
 
                 <p className="text-slate-300 mt-2">
-                  Dedicated emergency marine technical assistance available worldwide.
+                  Emergency technical attendance available for urgent inspections, casualty support and operational assistance.
                 </p>
               </div>
 
@@ -948,7 +948,7 @@ operational lifecycle.
   >
     {showForm
   ? "▲ Hide Inspection Request Form"
-  : "⚓ Request an Inspection"}
+  : "⚓ REQUEST AN INSPECTION"}
   </button>
 
 </div>
@@ -982,8 +982,7 @@ operational lifecycle.
 
       <br/><br/>
 
-      Our Marine Assurance Team will
-      contact you shortly.
+      One of our Marine Assurance Consultants will review your request and contact you shortly.
 
       <br/><br/>
 
@@ -1232,8 +1231,9 @@ defaultValue=""
         <option value="" disabled>Select Type of Inspection</option>
         <option>Internal Audit (ISM / ISPS / MLC)</option>
         <option>TMSA Core Audits (Nav, Engine, Cargo, Bunker, Enviro, Mooring)</option>
-        <option>SIRE 2.0 Preparation</option>
-        <option>RightShip Preparation</option>
+        <option>SIRE 2.0 InspectionPreparation</option>
+        <option>CDI Inspection Preparation</option>
+        <option>RightShip Inspection Preparation</option>
         <option>Onboard Training</option>
         <option>Sailing Navigation Audit</option>
         <option>Sailing Engineering Audit</option>
@@ -1441,7 +1441,7 @@ defaultValue=""
           <p className="text-slate-500 text-xs mt-2">
             PDF • DOC • DOCX • XLS • XLSX • JPG • PNG • ZIP
             <br />
-            Maximum file size: 10 MB
+            Maximum file size: 20 MB
           </p>
 
         </div>
@@ -1604,7 +1604,7 @@ defaultValue=""
       : "bg-[#2563EB] hover:bg-[#1D4ED8]"
   }`}
 >
-  {isSending ? "⏳ Sending Request..." : "REQUEST AN INSPECTION"}
+  {isSending ? "⏳ Sending Request..." : "SUBMIT INSPECTION REQUEST"}
 </button>
 
 </form>
