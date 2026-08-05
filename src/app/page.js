@@ -1231,19 +1231,20 @@ defaultValue=""
         <option value="" disabled>Select Type of Inspection</option>
         <option>Internal Audit (ISM / ISPS / MLC)</option>
         <option>TMSA Core Audits (Nav, Engine, Cargo, Bunker, Enviro, Mooring)</option>
-        <option>SIRE 2.0 InspectionPreparation</option>
+        <option>SIRE 2.0 Inspection Preparation</option>
         <option>CDI Inspection Preparation</option>
         <option>RightShip Inspection Preparation</option>
-        <option>Onboard Training</option>
+        <option>Onboard Training (OBT)</option>
         <option>Sailing Navigation Audit</option>
         <option>Sailing Engineering Audit</option>
         <option>Environmental Compliance Audit</option>
-        <option>Cargo & Mooring Audit</option>
+        <option>Cargo & Mooring Audits</option>
         <option>Bunker Audit</option>
         <option>Accident / Incident Investigation</option>
         <option>Vessel Pre-Purchase Inspection</option>
         <option>Vessel Take Over</option>
-        <option>SMS Implementation</option>
+        <option>SMS, PMS & SSP Implementation</option>
+        <option>Remote Audits</option>
         <option>Other</option>
       </select>
 
@@ -1641,7 +1642,7 @@ defaultValue=""
               </div>
 
               <p className="text-slate-300 leading-7 max-w-[340px]">
-                Independent marine inspections, audits and technical consultancy for the global shipping industry.
+                Marine Audit Global delivers independent marine audits, vessel inspections, marine assurance and technical consultancy services to ship owners, ship managers and operators worldwide.
               </p>
             </div>
 
@@ -1701,7 +1702,7 @@ defaultValue=""
 </li>
 
   <li className="hover:text-[#D4AF37] transition-colors cursor-default">
-  Marine Inspections & Surveys
+  Ship Inspections & Surveys
 </li>
 
   <li className="hover:text-[#D4AF37] transition-colors cursor-default">
@@ -1745,7 +1746,7 @@ defaultValue=""
     <li className="flex items-center gap-3">
   <MessageCircle size={18} className="text-[#D4AF37]" />
   <a
-    href="https://wa.me/917589228802"
+    href="https://wa.me/917589228802?text=Hello%20Marine%20Audit%20Global,%20I%20would%20like%20to%20request%20information%20regarding%20your%20marine%20assurance%20services."
     target="_blank"
     rel="noopener noreferrer"
     className="text-green-400 hover:text-[#D4AF37] transition-colors"
