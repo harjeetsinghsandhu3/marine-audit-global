@@ -795,7 +795,7 @@ Supporting Clients Across International Shipping Operations
 
 <p className="text-slate-300 mt-8 max-w-3xl mx-auto text-lg leading-8">
 Our professional marine assurance services are designed to support
-ship owners, ship managers and marine operators with practical,
+ship owners, ship managers and ship operators with practical,
 independent and experience-based solutions throughout the vessel's
 operational lifecycle.
 </p>
@@ -812,15 +812,15 @@ operational lifecycle.
 
   <ul className="space-y-3 text-slate-300 leading-7 list-disc pl-5 text-left">
 
-    <li>Independent marine audits</li>
+    <li>Independent Marine Audits & Inspections</li>
 
-    <li>Technical inspections</li>
+    <li>Technical Inspections</li>
 
-    <li>Pre-purchase surveys</li>
+    <li>Pre-Purchase surveys</li>
 
-    <li>Marine consultancy services</li>
+    <li>Marine Consultancy Services</li>
 
-    <li>Safe & compliant vessel operations</li>
+    <li>Safe & Compliant Vessel Operations</li>
 
   </ul>
 
@@ -834,15 +834,15 @@ operational lifecycle.
 <div className="w-full h-px bg-gradient-to-r from-[#D4AF37] to-transparent mb-6"></div>
   <ul className="space-y-3 text-slate-300 leading-7 list-disc pl-5 text-left">
 
-    <li>Internal audits (ISM, ISPS & MLC)</li>
+    <li>Internal Audits (ISM, ISPS & MLC)</li>
 
-    <li>SIRE 2.0 preparation</li>
+    <li>SIRE 2.0 Preparation</li>
 
-    <li>TMSA implementation support</li>
+    <li>TMSA Implementation Support</li>
 
-    <li>Compliance reviews</li>
+    <li>Compliance Reviews</li>
 
-    <li>Crew awareness programmes</li>
+    <li>Crew Awareness Programmes</li>
 
   </ul>
 
@@ -856,15 +856,15 @@ operational lifecycle.
 <div className="w-full h-px bg-gradient-to-r from-[#D4AF37] to-transparent mb-6"></div>
   <ul className="space-y-3 text-slate-300 leading-7 list-disc pl-5 text-left">
 
-    <li>Machinery condition assessments</li>
+    <li>Machinery Condition Assessments</li>
 
-    <li>Engine room audits</li>
+    <li>Engine Room Audits</li>
 
-    <li>Bunker operation reviews</li>
+    <li>Bunker Operation Reviews</li>
 
-    <li>Environmental compliance</li>
+    <li>Environmental Compliance</li>
 
-    <li>Technical risk reduction</li>
+    <li>Technical Risk Reduction</li>
 
   </ul>
 
@@ -873,20 +873,20 @@ operational lifecycle.
   <div className="bg-[#0B1B32] border border-slate-700 rounded-3xl p-8 flex flex-col h-full transition-all duration-500 hover:-translate-y-3 hover:border-[#D4AF37] hover:bg-[#0D203B] hover:shadow-[0_0_45px_rgba(212,175,55,0.18)]">
 
   <h3 className="text-2xl font-bold text-[#D4AF37] mb-6">
-    📋 Marine Operators
+    📋 Ship Operators
   </h3>
 <div className="w-full h-px bg-gradient-to-r from-[#D4AF37] to-transparent mb-6"></div>
   <ul className="space-y-3 text-slate-300 leading-7 list-disc pl-5 text-left">
 
-    <li>Marine consultancy</li>
+    <li>Marine Assurance & Consultancy</li>
 
-    <li>Accident investigations</li>
+    <li>Accident Investigations</li>
 
-    <li>Onboard training</li>
+    <li>Onboard Training</li>
 
-    <li>Operational support</li>
+    <li>Operational Support</li>
 
-    <li>Tailored assurance solutions</li>
+    <li>Tailored Assurance Solutions</li>
 
   </ul>
 
