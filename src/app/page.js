@@ -441,7 +441,7 @@ transition-all duration-300 transition">
       <div className="text-6xl mb-4">🛡️</div>
       <h3 className="font-semibold text-xl text-white">Certified</h3>
       <p className="text-slate-500 text-sm mt-2">
-        Marine Auditors
+        Internal Auditors
       </p>
     </div>
 
@@ -472,7 +472,7 @@ hover:-translate-y-1
 hover:shadow-[0_0_20px_rgba(212,175,55,0.25)]
 transition-all duration-300 transition">
       <div className="text-6xl mb-4">🚢</div>
-      <h3 className="font-semibold text-xl text-white">Surveys</h3>
+      <h3 className="font-semibold text-xl text-white">Ship Surveys</h3>
       <p className="text-slate-500 text-sm mt-2">
         Worldwide Inspections
       </p>
@@ -593,8 +593,7 @@ Supporting Clients Across International Shipping Operations
             </h2>
 
             <p className="text-slate-300 mt-6 max-w-2xl mx-auto leading-8">
-              Delivering high-standard marine inspections, audits and consultancy
-              solutions across international shipping operations.
+             Delivering high standard independent marine inspections, audits, assurance and technical consultancy services across international shipping operations.
             </p>
           </div>
 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
@@ -618,7 +617,7 @@ Supporting Clients Across International Shipping Operations
 
   <li>ISM, ISPS & MLC Internal Audits</li>
 
-  <li>Certified & Experienced Marine Auditors</li>
+  <li>Certified & Experienced Internal Auditors</li>
 
   <li>Compliance with IMO & Flag State Requirements</li>
 
@@ -680,7 +679,7 @@ Supporting Clients Across International Shipping Operations
 <div className="w-full h-px bg-gradient-to-r from-[#D4AF37] to-transparent mb-6"></div>
     <ul className="space-y-2 text-slate-300 leading-7 list-disc pl-5 text-left">
 
-  <li>Condition Assessment Surveys</li>
+  <li>Vessel Condition Assessment Surveys</li>
 
   <li>Pre-Purchase Vessel Inspections</li>
 
@@ -715,7 +714,7 @@ Supporting Clients Across International Shipping Operations
 
   <li>Flag State & Class Inspection Preparation</li>
 
-  <li>Technical Guidance for Ship Staff</li>
+  <li>Technical Guidance for Shipboard Personnel</li>
 
 </ul>
 
