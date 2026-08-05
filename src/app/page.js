@@ -812,15 +812,15 @@ operational lifecycle.
 
   <ul className="space-y-3 text-slate-300 leading-7 list-disc pl-5 text-left">
 
-    <li>Independent Marine Audits & Inspections</li>
+    <li>Independent Audits & Inspections</li>
 
     <li>Technical Inspections</li>
 
     <li>Pre-Purchase surveys</li>
 
-    <li>Marine Consultancy Services</li>
+    <li>Marine Assurance Services</li>
 
-    <li>Safe & Compliant Vessel Operations</li>
+    <li>Safe & Compliant Ship Operations</li>
 
   </ul>
 
@@ -858,13 +858,13 @@ operational lifecycle.
 
     <li>Machinery Condition Assessments</li>
 
-    <li>Engine Room Audits</li>
+    <li>Deck, Bridge & Engine Room Audits</li>
 
-    <li>Bunker Operation Reviews</li>
+    <li>Bunker & Cargo Operation Reviews</li>
 
     <li>Environmental Compliance</li>
 
-    <li>Technical Risk Reduction</li>
+    <li>Technical & Ship Safety Assessments</li>
 
   </ul>
 
