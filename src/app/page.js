@@ -1642,7 +1642,7 @@ defaultValue=""
               </div>
 
               <p className="text-slate-300 leading-7 max-w-[340px]">
-                Marine Audit Global delivers independent marine audits, vessel inspections, marine assurance and technical consultancy services to ship owners, ship managers and operators worldwide.
+                Marine Audit Global delivers independent ship audits & inspections, marine assurance and technical consultancy services to ship owners, ship managers & operators worldwide.        
               </p>
             </div>
 
